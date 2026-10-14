@@ -1,0 +1,763 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{08D84F50-764F-42DB-87E6-ED4B0CD8DD32}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>scmscopy</RootNamespace>
+    <AssemblyName>scmscopy</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin_addstaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_addstaff.Designer.cs">
+      <DependentUpon>admin_addstaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_deletestaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_deletestaff.Designer.cs">
+      <DependentUpon>admin_deletestaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_home.Designer.cs">
+      <DependentUpon>admin_home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_updatestaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_updatestaff.Designer.cs">
+      <DependentUpon>admin_updatestaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_viewstaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_viewstaff.Designer.cs">
+      <DependentUpon>admin_viewstaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="advidorhome_viewreq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="advidorhome_viewreq.Designer.cs">
+      <DependentUpon>advidorhome_viewreq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="advisordash_observation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="advisordash_observation.Designer.cs">
+      <DependentUpon>advisordash_observation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="advisorview_home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="advisorview_home.Designer.cs">
+      <DependentUpon>advisorview_home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="advisor_addrequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="advisor_addrequest.Designer.cs">
+      <DependentUpon>advisor_addrequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="advisor_observation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="advisor_observation.Designer.cs">
+      <DependentUpon>advisor_observation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mechanicdash_observation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mechanicdash_observation.Designer.cs">
+      <DependentUpon>mechanicdash_observation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mechanicdash_viewpaersreq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mechanicdash_viewpaersreq.Designer.cs">
+      <DependentUpon>mechanicdash_viewpaersreq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mechanicdash_viewrequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mechanicdash_viewrequest.Designer.cs">
+      <DependentUpon>mechanicdash_viewrequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mechanic_addpartreq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mechanic_addpartreq.Designer.cs">
+      <DependentUpon>mechanic_addpartreq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mechanic_dash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mechanic_dash.Designer.cs">
+      <DependentUpon>mechanic_dash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mechanic_home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mechanic_home.Designer.cs">
+      <DependentUpon>mechanic_home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mechanic_observation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mechanic_observation.Designer.cs">
+      <DependentUpon>mechanic_observation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mechanic_requestviewhome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mechanic_requestviewhome.Designer.cs">
+      <DependentUpon>mechanic_requestviewhome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="serviceadvisor_dash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="serviceadvisor_dash.Designer.cs">
+      <DependentUpon>serviceadvisor_dash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="serviceadvisor_home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="serviceadvisor_home.Designer.cs">
+      <DependentUpon>serviceadvisor_home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="storekeeperdash_partrequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="storekeeperdash_partrequest.Designer.cs">
+      <DependentUpon>storekeeperdash_partrequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="storekeeperdash_viewupdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="storekeeperdash_viewupdate.Designer.cs">
+      <DependentUpon>storekeeperdash_viewupdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="storekeeper_addparts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="storekeeper_addparts.Designer.cs">
+      <DependentUpon>storekeeper_addparts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="storekeeper_dash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="storekeeper_dash.Designer.cs">
+      <DependentUpon>storekeeper_dash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="storekeeper_home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="storekeeper_home.Designer.cs">
+      <DependentUpon>storekeeper_home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="storekeeper_updatestock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="storekeeper_updatestock.Designer.cs">
+      <DependentUpon>storekeeper_updatestock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="storekeeper_viewpartreq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="storekeeper_viewpartreq.Designer.cs">
+      <DependentUpon>storekeeper_viewpartreq.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="admin_addstaff.resx">
+      <DependentUpon>admin_addstaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_deletestaff.resx">
+      <DependentUpon>admin_deletestaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_home.resx">
+      <DependentUpon>admin_home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_updatestaff.resx">
+      <DependentUpon>admin_updatestaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_viewstaff.resx">
+      <DependentUpon>admin_viewstaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="advidorhome_viewreq.resx">
+      <DependentUpon>advidorhome_viewreq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="advisordash_observation.resx">
+      <DependentUpon>advisordash_observation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="advisorview_home.resx">
+      <DependentUpon>advisorview_home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="advisor_addrequest.resx">
+      <DependentUpon>advisor_addrequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="advisor_observation.resx">
+      <DependentUpon>advisor_observation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mechanicdash_observation.resx">
+      <DependentUpon>mechanicdash_observation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mechanicdash_viewpaersreq.resx">
+      <DependentUpon>mechanicdash_viewpaersreq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mechanicdash_viewrequest.resx">
+      <DependentUpon>mechanicdash_viewrequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mechanic_addpartreq.resx">
+      <DependentUpon>mechanic_addpartreq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mechanic_dash.resx">
+      <DependentUpon>mechanic_dash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mechanic_home.resx">
+      <DependentUpon>mechanic_home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mechanic_observation.resx">
+      <DependentUpon>mechanic_observation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mechanic_requestviewhome.resx">
+      <DependentUpon>mechanic_requestviewhome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="serviceadvisor_dash.resx">
+      <DependentUpon>serviceadvisor_dash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="serviceadvisor_home.resx">
+      <DependentUpon>serviceadvisor_home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storekeeperdash_partrequest.resx">
+      <DependentUpon>storekeeperdash_partrequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storekeeperdash_viewupdate.resx">
+      <DependentUpon>storekeeperdash_viewupdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storekeeper_addparts.resx">
+      <DependentUpon>storekeeper_addparts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storekeeper_dash.resx">
+      <DependentUpon>storekeeper_dash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storekeeper_home.resx">
+      <DependentUpon>storekeeper_home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storekeeper_updatestock.resx">
+      <DependentUpon>storekeeper_updatestock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="storekeeper_viewpartreq.resx">
+      <DependentUpon>storekeeper_viewpartreq.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image Sep 9, 2026, 01_14_07 PM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image Aug 13, 2026, 02_23_40 PM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image Aug 13, 2026, 03_16_41 PM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image Sep 9, 2026, 12_22_03 PM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image Sep 9, 2026, 12_22_03 PM1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image Sep 9, 2026, 01_14_07 PM1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-user-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-password-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image Sep 9, 2026, 01_14_07 PM2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-view-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-update-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-update-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-logout-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-logout-481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-staff-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-update-64 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-50 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-30 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sleek-cars-displayed-inside-a-contemporary-showroom-designed-to-attract-potential-buyers-during-the-day-photo.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image Sep 14, 2026, 07_23_35 PM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image Sep 14, 2026, 07_23_35 PM1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-view-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-installing-updates-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dark-night-rain-car-wallpaper-preview.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-conference-foreground-selected-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-view-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-windows-update-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-key-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-chat-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-update-file-70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-view-70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-staff-70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-menu-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-menu-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-menu-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-online-maintenance-portal-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-online-maintenance-portal-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-service-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-mechanic-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-tools-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-reports-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-logout-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-staff-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-mechanic-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-yes-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bodyguard-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-customer-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-menu-301.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-menu-302.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-menu-303.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-request-service-70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-request-service-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-day-view-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bill-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\job-application.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\work-in-progress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\healthy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-view-70 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-exhaust-pipe-70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-observation-70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-last-24-hours-70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\operator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\work-in-progress %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\verification.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-view-delivery-70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-stock-70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-requirement-70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-statistics-70.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spare-parts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ready-stock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expired.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profit-up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image Sep 16, 2026, 02_02_42 PM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image Sep 16, 2026, 02_02_42 PM1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image Sep 16, 2026, 02_02_42 PM2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ChatGPT Image Sep 16, 2026, 02_02_42 PM3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new-account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new-account1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-id-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-id-100 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-vehicle-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-vehicle-100 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-vehicle-100 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-vehicle-100 %281%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-customer-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-contact-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-email-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-date-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-audit-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-complaint-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pending-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-rupee-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-advisor-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-wrench-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cogwheel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cloud-info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data-processing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-save-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-save-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-reset-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spare-parts %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\recently.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\repair-tool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\load.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-dot-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-dot-100 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brake.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-view-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-observation-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bill-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-view-301.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-301.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-observation-301.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-302.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-view-302.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-update-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\assign %281%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

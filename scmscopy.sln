@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.37507.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "scmscopy", "scmscopy\scmscopy.csproj", "{08D84F50-764F-42DB-87E6-ED4B0CD8DD32}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08D84F50-764F-42DB-87E6-ED4B0CD8DD32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08D84F50-764F-42DB-87E6-ED4B0CD8DD32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08D84F50-764F-42DB-87E6-ED4B0CD8DD32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08D84F50-764F-42DB-87E6-ED4B0CD8DD32}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CE17271B-932C-41B0-9C4A-266BF01D1A5A}
+	EndGlobalSection
+EndGlobal
